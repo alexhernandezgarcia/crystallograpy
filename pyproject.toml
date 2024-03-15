@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "crystallograpy"
+version = "0.1.0"
+description = "Crystallography properties"
+authors = ["Alex <alex.hernandez-garcia@mila.quebec>"]
+readme = "README.md"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+# Base dependencies.
+numpy = "*"
+python = "^3.10"
+
+# Optional dependencies (extras)
+
+# Dev extras
+black = { version = ">=23.9.1", optional = true }
+flake8 = { version = ">=6.1.0", optional = true }
+isort = { version = ">=5.12.0", optional = true }
+pylint = { version = ">=2.17.6", optional = true }
+ipdb = { version = ">=0.13.13", optional = true }
+jupyter = { version = ">=1.0.0", optional = true }
+pymatgen = {version = ">=2023.12.18", optional = true }
+pytest = { version = ">=7.4.2", optional = true }
+pytest-repeat = { version = ">=0.9.1", optional = true }
+
+[tool.poetry.extras]
+dev = [
+    "black",
+    "flake8",
+    "isort",
+    "pylint",
+    "ipdb",
+    "jupyter",
+    "pymatgen",
+    "pytest",
+    "pytest-repeat",
+]
